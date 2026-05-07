@@ -1,0 +1,26 @@
+
+package javanesneiçiçeklaslar;
+
+public class NonStatic {
+   private int a = 10;
+   
+   public class Inner{
+   int a =1;
+   public void run(){
+       System.out.println(a);
+       System.out.println(this.a);
+       System.out.println(NonStatic.this.a);
+               
+   }
+   
+   }
+   public void run(){
+       System.out.println(a);
+       System.out.println(this.a);
+     //  Inner i = new Inner();   dış sınıftan iç sınıfın nesnesıne ulaşmamız ıcın iç sınıfın nesnesını uretmen lazım yanı
+      // System.out.println(i.a);
+   
+//System.out.println(Inner.this.a)  = bu HATALI KULLANIM
+   }
+   
+}
